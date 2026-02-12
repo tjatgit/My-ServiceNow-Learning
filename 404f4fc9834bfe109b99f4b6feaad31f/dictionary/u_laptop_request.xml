@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="5558138d838bfe109b99f4b6feaad377" max_length="40" name="u_laptop_request" type="collection">
-        <element label="Requester" max_length="32" name="u_requeste0" reference="sys_user" type="reference"/>
-        <element label="Justification" max_length="1001" name="u_justification" type="string"/>
+    <element db_object_id="5558138d838bfe109b99f4b6feaad377" label="Laptop request" max_length="40" name="u_laptop_request" type="collection">
+        <element label="Requester" mandatory="true" max_length="32" name="u_requeste0" reference="sys_user" type="reference"/>
+        <element label="Justification" mandatory="true" max_length="1001" name="u_justification" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="u_number" type="string"/>
-        <element choice="1" label="Laptop Model" max_length="40" name="u_laptop_model" type="choice">
+        <element choice="1" label="Laptop Model" mandatory="true" max_length="40" name="u_laptop_model" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Microsoft Surface" sequence="3" value="microsoft_surface"/>
                 <element inactive_on_update="false" label="Dell Precision" sequence="1" value="dell_precision"/>
